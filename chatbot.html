@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        :root {
+            --main-color: hsl(257, 68%, 73%);
+            --light-red: hsl(0, 67%, 71%);
+            --light-yellow: hsl(42, 73%, 74%);
+            --black-90-: hsl(0, 0%, 10%);
+            --black-70: hsl(0, 0%, 30%);
+            --white: hsl(0, 0%, 100%);
+            --white-alpha-40: hsla(0, 0%, 100%, 0.4);
+            --white-alpha-50: hsla(0, 0%, 100%, 0.5);
+            --body-bg-color: hsl(42, 71%, 87%);
+            --border-color-1: hsl(42, 45%, 73%);
+            --border-color-2: hsla(44, 45%, 73%, 0.4);
+            --shadow-color: hsl(42, 45%, 73%);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--body-bg-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        .text-container {
+            text-align: center;
+            padding: 20px;
+            margin-top: 100px; /* Adjusted margin-top to accommodate the fixed header */
+            background-color: var(--main-color);
+            color: var(--white);
+            width: 50%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 900px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .chatbot,
+        .dog-image {
+            width: 340px;
+            height: 340px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .chatbot iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .dog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header {
+            position: fixed;
+            left: -20%;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            padding: 5px 0;
+            background-color: transparent; /* Added background color */
+        }
+
+        .header-main {
+            display: flex;
+            align-items: left;
+            justify-content: space-between;
+            position: relative;
+            padding: 0 10px; /* Added padding */
+        }
+
+        .logo a {
+            font-size: 28px;
+            text-transform: capitalize;
+            font-weight: 600;
+            color: var(--black-90-);
+            text-decoration: none; /* Removed underline */
+            display: flex;
+            align-items: right;
+        }
+
+        .logo img {
+            width: 30px;
+            height: 30px;
+            margin-right: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <a href="./index.php"><img src="img/logo.jpg" alt="logo">PetCare</a>
+                </div>
+               
+                
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <div class="text-container">
+        <h1>I'm here to make your pet's life luxurious</h1>
+        <h3>Chat here</h3>
+    </div>
+    <div class="container">
+        <div class="dog-image">
+            <img src="./img/home-img.jpeg" alt="Dog Image">
+        </div>
+
+        <div class="chatbot">
+            <iframe src='https://webchat.botframework.com/embed/wecarechat1-bot?s=cSQW3jvzw6c.WrNXpxKnsnSA4LW7rYEd-K9-96z1twOrRZpHOH2ZDk0'></iframe>
+        </div>
+
+    </div>
+</body>
+
+</html>
